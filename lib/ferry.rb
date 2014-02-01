@@ -1,0 +1,3 @@
+class Ferry
+
+end
