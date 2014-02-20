@@ -1,0 +1,1 @@
+require 'ferry_kata'

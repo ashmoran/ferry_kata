@@ -1,1 +1,1 @@
-require 'ferry'
+require 'event_bus'

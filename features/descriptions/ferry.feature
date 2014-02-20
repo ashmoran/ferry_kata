@@ -4,10 +4,19 @@ Feature: Ferry
   I want a ferry
 
   Background:
-	  Given a Ferry has space capacity 6 and weight capacity 10
-    And there is 1 Ferry
+	  Given a Ferry has space capacity 6
+    And there is a Port
 
   Scenario: No vehicles
     Given no vehicles have arrived
-    Then a Ferry has not sailed
+    Then a Ferry does not sail
+
+  Scenario: One vehicle, not full
+    When a van arrives
+    Then a Ferry does not sail
+
+  Scenario: Two vehicles, now full
+    When a van arrives
+    And another van arrives
+    Then a Ferry sails
 
